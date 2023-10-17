@@ -1,7 +1,7 @@
 #pragma once
 
+#include <cmath>
 #include <cstdint>
-
 /*
  * The Wrap32 type represents a 32-bit unsigned integer that:
  *    - starts at an arbitrary "zero point" (initial value), and

@@ -3,9 +3,15 @@
 #include "reassembler.hh"
 #include "tcp_receiver_message.hh"
 #include "tcp_sender_message.hh"
-
+#include <optional>
 class TCPReceiver
 {
+private:
+  Wrap32 zero_point { 0 };
+  uint64_t reassembler_in { 0 };
+  bool FIN_set { false };
+  bool SYN_set { false };
+
 public:
   /*
    * The TCPReceiver receives TCPSenderMessages, inserting their payload into the Reassembler
