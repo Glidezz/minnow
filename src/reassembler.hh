@@ -3,9 +3,15 @@
 #include "byte_stream.hh"
 
 #include <string>
-
+#include <unordered_map>
 class Reassembler
 {
+private:
+  uint64_t unpop_index_;
+  uint64_t last_index_;
+  bool end_;
+  std::unordered_map<uint64_t, std::string> buf_;
+
 public:
   /*
    * Insert a new substring to be reassembled into a ByteStream.
@@ -27,6 +33,7 @@ public:
    *
    * The Reassembler should close the stream after writing the last byte.
    */
+  Reassembler() : unpop_index_( 0 ), last_index_( 0 ), end_( false ), buf_() {}
   void insert( uint64_t first_index, std::string data, bool is_last_substring, Writer& output );
 
   // How many bytes are stored in the Reassembler itself?

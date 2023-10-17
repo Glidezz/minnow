@@ -5,13 +5,14 @@
 using namespace std;
 
 ByteStream::ByteStream( uint64_t capacity )
-  : capacity_( capacity ), error_( false ), end_( false ), poped_num_( 0 ), buf_(){}
+  : capacity_( capacity ), error_( false ), end_( false ), poped_num_( 0 ), buf_()
+{}
 
 void Writer::push( string data )
 {
   // Your code here.
   uint64_t len = min( (uint64_t)data.length(), this->available_capacity() );
-  for ( uint64_t i = 0; i < len; i++){
+  for ( uint64_t i = 0; i < len; i++ ) {
     buf_.push_back( data[i] );
   }
 }
@@ -68,7 +69,7 @@ void Reader::pop( uint64_t len )
 {
   // Your code here.
   len = min( len, this->bytes_buffered() );
-  for ( uint64_t i = 0; i < len; i++){
+  for ( uint64_t i = 0; i < len; i++ ) {
     buf_.pop_front();
   }
   poped_num_ += len;
