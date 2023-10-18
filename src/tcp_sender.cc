@@ -75,7 +75,8 @@ void TCPSender::push( Reader& outbound_stream )
 }
 
 TCPSenderMessage TCPSender::send_empty_message() const
-{ // Your code here.
+{ 
+  // Your code here.
   return TCPSenderMessage { isn_ + next_seqno, false, {}, false };
 }
 
