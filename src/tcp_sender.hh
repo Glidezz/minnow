@@ -3,43 +3,8 @@
 #include "byte_stream.hh"
 #include "tcp_receiver_message.hh"
 #include "tcp_sender_message.hh"
-
+#include "timer.hh"
 #include <queue>
-
-class Timer
-{
-private:
-  uint64_t initial_RTO_ms;
-  uint64_t current_RTO_ms;
-  uint64_t time_ms { 0 };
-  bool running { false };
-
-public:
-  explicit Timer( uint64_t init_ROT ) : initial_RTO_ms( init_ROT ), current_RTO_ms( init_ROT ) {}
-
-  void stop() { running = false; }
-
-  void start()
-  {
-    time_ms = 0;
-    running = true;
-  }
-
-  void tick( uint64_t ms_since_last_tick )
-  {
-    if ( running ) {
-      time_ms += ms_since_last_tick;
-    }
-  }
-
-  bool is_running() { return running; }
-
-  bool is_expired() { return running && time_ms >= current_RTO_ms; }
-
-  void doubleRTO() { current_RTO_ms *= 2; }
-
-  void resetRTO() { current_RTO_ms = initial_RTO_ms; }
-};
 
 class TCPSender
 {
@@ -48,7 +13,7 @@ class TCPSender
 
   bool syn_ { false };
   bool fin_ { false };
-  uint64_t retransmit_cnt_ { 0 }; // 超时重复发送的数量
+  uint64_t retransmit_cnt_ { 0 }; // 连续重复发送的数量
 
   uint64_t acked_seqno { 0 };
   uint64_t next_seqno { 0 };
