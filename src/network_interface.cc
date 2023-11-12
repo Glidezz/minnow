@@ -54,6 +54,7 @@ void NetworkInterface::send_datagram( const InternetDatagram& dgram, const Addre
 // frame: the incoming Ethernet frame
 optional<InternetDatagram> NetworkInterface::recv_frame( const EthernetFrame& frame )
 {
+  //接收到的帧的目标地址不是自己也不是广播地址
   if ( frame.header.dst != ethernet_address_ && frame.header.dst != ETHERNET_BROADCAST )
     return {};
 
