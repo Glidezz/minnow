@@ -45,7 +45,7 @@ private:
     ip_and_mac_; // IP地址与mac地址之间的映射 第二个参数表示已经缓存的时间
   std::unordered_map<uint32_t, size_t> arp_timer_;                             // arp缓存的时间
   std::unordered_map<uint32_t, std::vector<InternetDatagram>> waited_dagrams_; //等待发送的ip数据报
-  std::queue<EthernetFrame> out_frames_;
+  std::queue<EthernetFrame> out_frames_;                                       //等待发送的帧
 
 public:
   // Construct a network interface with given Ethernet (network-access-layer) and IP (internet-layer)
