@@ -57,13 +57,13 @@ class Router
 
   struct Item
   {
-    uint32_t route_prefix;
-    uint8_t prefix_length;
-    std::optional<Address> next_hop;
-    size_t interface_num {};
+    uint32_t route_prefix;           // IP地址
+    uint8_t prefix_length;           //前缀长度
+    std::optional<Address> next_hop; //下一跳地址
+    size_t interface_num {};         //接口的索引
   };
 
-  std::vector<Item> routing_table_ {};
+  std::vector<Item> routing_table_ {}; //路由表
   std::vector<Item>::iterator longest_prefix_match_( uint32_t dst_ip );
   static int match_length( uint32_t src_ip, uint32_t tgt_ip, uint8_t tgt_len );
 
