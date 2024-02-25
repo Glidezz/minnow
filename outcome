@@ -1,0 +1,554 @@
+Running tests...
+Test project /mnt/minnow/build
+      Start  1: compile with bug-checkers
+ 1/35 Test  #1: compile with bug-checkers ........   Passed    0.79 sec
+      Start  2: byte_stream_basics
+ 2/35 Test  #2: byte_stream_basics ...............   Passed    1.06 sec
+      Start  3: byte_stream_capacity
+ 3/35 Test  #3: byte_stream_capacity .............   Passed    1.06 sec
+      Start  4: byte_stream_one_write
+ 4/35 Test  #4: byte_stream_one_write ............   Passed    1.06 sec
+      Start  5: byte_stream_two_writes
+ 5/35 Test  #5: byte_stream_two_writes ...........   Passed    1.06 sec
+      Start  6: byte_stream_many_writes
+ 6/35 Test  #6: byte_stream_many_writes ..........   Passed    1.09 sec
+      Start  7: byte_stream_stress_test
+ 7/35 Test  #7: byte_stream_stress_test ..........   Passed    1.38 sec
+      Start  8: reassembler_single
+Could not find executable reassembler_single_sanitized
+Looked in the following places:
+reassembler_single_sanitized
+reassembler_single_sanitized
+Release/reassembler_single_sanitized
+Release/reassembler_single_sanitized
+Debug/reassembler_single_sanitized
+Debug/reassembler_single_sanitized
+MinSizeRel/reassembler_single_sanitized
+MinSizeRel/reassembler_single_sanitized
+RelWithDebInfo/reassembler_single_sanitized
+RelWithDebInfo/reassembler_single_sanitized
+Deployment/reassembler_single_sanitized
+Deployment/reassembler_single_sanitized
+Development/reassembler_single_sanitized
+Development/reassembler_single_sanitized
+ 8/35 Test  #8: reassembler_single ...............***Not Run   0.00 sec
+      Start  9: reassembler_cap
+Could not find executable reassembler_cap_sanitized
+Looked in the following places:
+reassembler_cap_sanitized
+reassembler_cap_sanitized
+Release/reassembler_cap_sanitized
+Release/reassembler_cap_sanitized
+Debug/reassembler_cap_sanitized
+Debug/reassembler_cap_sanitized
+MinSizeRel/reassembler_cap_sanitized
+MinSizeRel/reassembler_cap_sanitized
+RelWithDebInfo/reassembler_cap_sanitized
+RelWithDebInfo/reassembler_cap_sanitized
+Deployment/reassembler_cap_sanitized
+Deployment/reassembler_cap_sanitized
+Development/reassembler_cap_sanitized
+Development/reassembler_cap_sanitized
+ 9/35 Test  #9: reassembler_cap ..................***Not Run   0.00 sec
+      Start 10: reassembler_seq
+Could not find executable reassembler_seq_sanitized
+Looked in the following places:
+reassembler_seq_sanitized
+reassembler_seq_sanitized
+Release/reassembler_seq_sanitized
+Release/reassembler_seq_sanitized
+Debug/reassembler_seq_sanitized
+Debug/reassembler_seq_sanitized
+MinSizeRel/reassembler_seq_sanitized
+MinSizeRel/reassembler_seq_sanitized
+RelWithDebInfo/reassembler_seq_sanitized
+RelWithDebInfo/reassembler_seq_sanitized
+Deployment/reassembler_seq_sanitized
+Deployment/reassembler_seq_sanitized
+Development/reassembler_seq_sanitized
+Development/reassembler_seq_sanitized
+10/35 Test #10: reassembler_seq ..................***Not Run   0.00 sec
+      Start 11: reassembler_dup
+Could not find executable reassembler_dup_sanitized
+Looked in the following places:
+reassembler_dup_sanitized
+reassembler_dup_sanitized
+Release/reassembler_dup_sanitized
+Release/reassembler_dup_sanitized
+Debug/reassembler_dup_sanitized
+Debug/reassembler_dup_sanitized
+MinSizeRel/reassembler_dup_sanitized
+MinSizeRel/reassembler_dup_sanitized
+RelWithDebInfo/reassembler_dup_sanitized
+RelWithDebInfo/reassembler_dup_sanitized
+Deployment/reassembler_dup_sanitized
+Deployment/reassembler_dup_sanitized
+Development/reassembler_dup_sanitized
+Development/reassembler_dup_sanitized
+11/35 Test #11: reassembler_dup ..................***Not Run   0.00 sec
+      Start 12: reassembler_holes
+Could not find executable reassembler_holes_sanitized
+Looked in the following places:
+reassembler_holes_sanitized
+reassembler_holes_sanitized
+Release/reassembler_holes_sanitized
+Release/reassembler_holes_sanitized
+Debug/reassembler_holes_sanitized
+Debug/reassembler_holes_sanitized
+MinSizeRel/reassembler_holes_sanitized
+MinSizeRel/reassembler_holes_sanitized
+RelWithDebInfo/reassembler_holes_sanitized
+RelWithDebInfo/reassembler_holes_sanitized
+Deployment/reassembler_holes_sanitized
+Deployment/reassembler_holes_sanitized
+Development/reassembler_holes_sanitized
+Development/reassembler_holes_sanitized
+12/35 Test #12: reassembler_holes ................***Not Run   0.00 sec
+      Start 13: reassembler_overlapping
+Could not find executable reassembler_overlapping_sanitized
+Looked in the following places:
+reassembler_overlapping_sanitized
+reassembler_overlapping_sanitized
+Release/reassembler_overlapping_sanitized
+Release/reassembler_overlapping_sanitized
+Debug/reassembler_overlapping_sanitized
+Debug/reassembler_overlapping_sanitized
+MinSizeRel/reassembler_overlapping_sanitized
+MinSizeRel/reassembler_overlapping_sanitized
+RelWithDebInfo/reassembler_overlapping_sanitized
+RelWithDebInfo/reassembler_overlapping_sanitized
+Deployment/reassembler_overlapping_sanitized
+Deployment/reassembler_overlapping_sanitized
+Development/reassembler_overlapping_sanitized
+Development/reassembler_overlapping_sanitized
+13/35 Test #13: reassembler_overlapping ..........***Not Run   0.00 sec
+      Start 14: reassembler_win
+Could not find executable reassembler_win_sanitized
+Looked in the following places:
+reassembler_win_sanitized
+reassembler_win_sanitized
+Release/reassembler_win_sanitized
+Release/reassembler_win_sanitized
+Debug/reassembler_win_sanitized
+Debug/reassembler_win_sanitized
+MinSizeRel/reassembler_win_sanitized
+MinSizeRel/reassembler_win_sanitized
+RelWithDebInfo/reassembler_win_sanitized
+RelWithDebInfo/reassembler_win_sanitized
+Deployment/reassembler_win_sanitized
+Deployment/reassembler_win_sanitized
+Development/reassembler_win_sanitized
+Development/reassembler_win_sanitized
+14/35 Test #14: reassembler_win ..................***Not Run   0.00 sec
+      Start 15: wrapping_integers_cmp
+Could not find executable wrapping_integers_cmp_sanitized
+Looked in the following places:
+wrapping_integers_cmp_sanitized
+wrapping_integers_cmp_sanitized
+Release/wrapping_integers_cmp_sanitized
+Release/wrapping_integers_cmp_sanitized
+Debug/wrapping_integers_cmp_sanitized
+Debug/wrapping_integers_cmp_sanitized
+MinSizeRel/wrapping_integers_cmp_sanitized
+MinSizeRel/wrapping_integers_cmp_sanitized
+RelWithDebInfo/wrapping_integers_cmp_sanitized
+RelWithDebInfo/wrapping_integers_cmp_sanitized
+Deployment/wrapping_integers_cmp_sanitized
+Deployment/wrapping_integers_cmp_sanitized
+Development/wrapping_integers_cmp_sanitized
+Development/wrapping_integers_cmp_sanitized
+15/35 Test #15: wrapping_integers_cmp ............***Not Run   0.00 sec
+      Start 16: wrapping_integers_wrap
+Could not find executable wrapping_integers_wrap_sanitized
+Looked in the following places:
+wrapping_integers_wrap_sanitized
+wrapping_integers_wrap_sanitized
+Release/wrapping_integers_wrap_sanitized
+Release/wrapping_integers_wrap_sanitized
+Debug/wrapping_integers_wrap_sanitized
+Debug/wrapping_integers_wrap_sanitized
+MinSizeRel/wrapping_integers_wrap_sanitized
+MinSizeRel/wrapping_integers_wrap_sanitized
+RelWithDebInfo/wrapping_integers_wrap_sanitized
+RelWithDebInfo/wrapping_integers_wrap_sanitized
+Deployment/wrapping_integers_wrap_sanitized
+Deployment/wrapping_integers_wrap_sanitized
+Development/wrapping_integers_wrap_sanitized
+Development/wrapping_integers_wrap_sanitized
+16/35 Test #16: wrapping_integers_wrap ...........***Not Run   0.00 sec
+      Start 17: wrapping_integers_unwrap
+Could not find executable wrapping_integers_unwrap_sanitized
+Looked in the following places:
+wrapping_integers_unwrap_sanitized
+wrapping_integers_unwrap_sanitized
+Release/wrapping_integers_unwrap_sanitized
+Release/wrapping_integers_unwrap_sanitized
+Debug/wrapping_integers_unwrap_sanitized
+Debug/wrapping_integers_unwrap_sanitized
+MinSizeRel/wrapping_integers_unwrap_sanitized
+MinSizeRel/wrapping_integers_unwrap_sanitized
+RelWithDebInfo/wrapping_integers_unwrap_sanitized
+RelWithDebInfo/wrapping_integers_unwrap_sanitized
+Deployment/wrapping_integers_unwrap_sanitized
+Deployment/wrapping_integers_unwrap_sanitized
+Development/wrapping_integers_unwrap_sanitized
+Development/wrapping_integers_unwrap_sanitized
+17/35 Test #17: wrapping_integers_unwrap .........***Not Run   0.00 sec
+      Start 18: wrapping_integers_roundtrip
+Could not find executable wrapping_integers_roundtrip_sanitized
+Looked in the following places:
+wrapping_integers_roundtrip_sanitized
+wrapping_integers_roundtrip_sanitized
+Release/wrapping_integers_roundtrip_sanitized
+Release/wrapping_integers_roundtrip_sanitized
+Debug/wrapping_integers_roundtrip_sanitized
+Debug/wrapping_integers_roundtrip_sanitized
+MinSizeRel/wrapping_integers_roundtrip_sanitized
+MinSizeRel/wrapping_integers_roundtrip_sanitized
+RelWithDebInfo/wrapping_integers_roundtrip_sanitized
+RelWithDebInfo/wrapping_integers_roundtrip_sanitized
+Deployment/wrapping_integers_roundtrip_sanitized
+Deployment/wrapping_integers_roundtrip_sanitized
+Development/wrapping_integers_roundtrip_sanitized
+Development/wrapping_integers_roundtrip_sanitized
+18/35 Test #18: wrapping_integers_roundtrip ......***Not Run   0.00 sec
+      Start 19: wrapping_integers_extra
+Could not find executable wrapping_integers_extra_sanitized
+Looked in the following places:
+wrapping_integers_extra_sanitized
+wrapping_integers_extra_sanitized
+Release/wrapping_integers_extra_sanitized
+Release/wrapping_integers_extra_sanitized
+Debug/wrapping_integers_extra_sanitized
+Debug/wrapping_integers_extra_sanitized
+MinSizeRel/wrapping_integers_extra_sanitized
+MinSizeRel/wrapping_integers_extra_sanitized
+RelWithDebInfo/wrapping_integers_extra_sanitized
+RelWithDebInfo/wrapping_integers_extra_sanitized
+Deployment/wrapping_integers_extra_sanitized
+Deployment/wrapping_integers_extra_sanitized
+Development/wrapping_integers_extra_sanitized
+Development/wrapping_integers_extra_sanitized
+19/35 Test #19: wrapping_integers_extra ..........***Not Run   0.00 sec
+      Start 20: recv_connect
+Could not find executable recv_connect_sanitized
+Looked in the following places:
+recv_connect_sanitized
+recv_connect_sanitized
+Release/recv_connect_sanitized
+Release/recv_connect_sanitized
+Debug/recv_connect_sanitized
+Debug/recv_connect_sanitized
+MinSizeRel/recv_connect_sanitized
+MinSizeRel/recv_connect_sanitized
+RelWithDebInfo/recv_connect_sanitized
+RelWithDebInfo/recv_connect_sanitized
+Deployment/recv_connect_sanitized
+Deployment/recv_connect_sanitized
+Development/recv_connect_sanitized
+Development/recv_connect_sanitized
+20/35 Test #20: recv_connect .....................***Not Run   0.00 sec
+      Start 21: recv_transmit
+Could not find executable recv_transmit_sanitized
+Looked in the following places:
+recv_transmit_sanitized
+recv_transmit_sanitized
+Release/recv_transmit_sanitized
+Release/recv_transmit_sanitized
+Debug/recv_transmit_sanitized
+Debug/recv_transmit_sanitized
+MinSizeRel/recv_transmit_sanitized
+MinSizeRel/recv_transmit_sanitized
+RelWithDebInfo/recv_transmit_sanitized
+RelWithDebInfo/recv_transmit_sanitized
+Deployment/recv_transmit_sanitized
+Deployment/recv_transmit_sanitized
+Development/recv_transmit_sanitized
+Development/recv_transmit_sanitized
+21/35 Test #21: recv_transmit ....................***Not Run   0.00 sec
+      Start 22: recv_window
+Could not find executable recv_window_sanitized
+Looked in the following places:
+recv_window_sanitized
+recv_window_sanitized
+Release/recv_window_sanitized
+Release/recv_window_sanitized
+Debug/recv_window_sanitized
+Debug/recv_window_sanitized
+MinSizeRel/recv_window_sanitized
+MinSizeRel/recv_window_sanitized
+RelWithDebInfo/recv_window_sanitized
+RelWithDebInfo/recv_window_sanitized
+Deployment/recv_window_sanitized
+Deployment/recv_window_sanitized
+Development/recv_window_sanitized
+Development/recv_window_sanitized
+22/35 Test #22: recv_window ......................***Not Run   0.00 sec
+      Start 23: recv_reorder
+Could not find executable recv_reorder_sanitized
+Looked in the following places:
+recv_reorder_sanitized
+recv_reorder_sanitized
+Release/recv_reorder_sanitized
+Release/recv_reorder_sanitized
+Debug/recv_reorder_sanitized
+Debug/recv_reorder_sanitized
+MinSizeRel/recv_reorder_sanitized
+MinSizeRel/recv_reorder_sanitized
+RelWithDebInfo/recv_reorder_sanitized
+RelWithDebInfo/recv_reorder_sanitized
+Deployment/recv_reorder_sanitized
+Deployment/recv_reorder_sanitized
+Development/recv_reorder_sanitized
+Development/recv_reorder_sanitized
+23/35 Test #23: recv_reorder .....................***Not Run   0.00 sec
+      Start 24: recv_reorder_more
+Could not find executable recv_reorder_more_sanitized
+Looked in the following places:
+recv_reorder_more_sanitized
+recv_reorder_more_sanitized
+Release/recv_reorder_more_sanitized
+Release/recv_reorder_more_sanitized
+Debug/recv_reorder_more_sanitized
+Debug/recv_reorder_more_sanitized
+MinSizeRel/recv_reorder_more_sanitized
+MinSizeRel/recv_reorder_more_sanitized
+RelWithDebInfo/recv_reorder_more_sanitized
+RelWithDebInfo/recv_reorder_more_sanitized
+Deployment/recv_reorder_more_sanitized
+Deployment/recv_reorder_more_sanitized
+Development/recv_reorder_more_sanitized
+Development/recv_reorder_more_sanitized
+24/35 Test #24: recv_reorder_more ................***Not Run   0.00 sec
+      Start 25: recv_close
+Could not find executable recv_close_sanitized
+Looked in the following places:
+recv_close_sanitized
+recv_close_sanitized
+Release/recv_close_sanitized
+Release/recv_close_sanitized
+Debug/recv_close_sanitized
+Debug/recv_close_sanitized
+MinSizeRel/recv_close_sanitized
+MinSizeRel/recv_close_sanitized
+RelWithDebInfo/recv_close_sanitized
+RelWithDebInfo/recv_close_sanitized
+Deployment/recv_close_sanitized
+Deployment/recv_close_sanitized
+Development/recv_close_sanitized
+Development/recv_close_sanitized
+25/35 Test #25: recv_close .......................***Not Run   0.00 sec
+      Start 26: recv_special
+Could not find executable recv_special_sanitized
+Looked in the following places:
+recv_special_sanitized
+recv_special_sanitized
+Release/recv_special_sanitized
+Release/recv_special_sanitized
+Debug/recv_special_sanitized
+Debug/recv_special_sanitized
+MinSizeRel/recv_special_sanitized
+MinSizeRel/recv_special_sanitized
+RelWithDebInfo/recv_special_sanitized
+RelWithDebInfo/recv_special_sanitized
+Deployment/recv_special_sanitized
+Deployment/recv_special_sanitized
+Development/recv_special_sanitized
+Development/recv_special_sanitized
+26/35 Test #26: recv_special .....................***Not Run   0.00 sec
+      Start 27: send_connect
+Could not find executable send_connect_sanitized
+Looked in the following places:
+send_connect_sanitized
+send_connect_sanitized
+Release/send_connect_sanitized
+Release/send_connect_sanitized
+Debug/send_connect_sanitized
+Debug/send_connect_sanitized
+MinSizeRel/send_connect_sanitized
+MinSizeRel/send_connect_sanitized
+RelWithDebInfo/send_connect_sanitized
+RelWithDebInfo/send_connect_sanitized
+Deployment/send_connect_sanitized
+Deployment/send_connect_sanitized
+Development/send_connect_sanitized
+Development/send_connect_sanitized
+27/35 Test #27: send_connect .....................***Not Run   0.00 sec
+      Start 28: send_transmit
+Could not find executable send_transmit_sanitized
+Looked in the following places:
+send_transmit_sanitized
+send_transmit_sanitized
+Release/send_transmit_sanitized
+Release/send_transmit_sanitized
+Debug/send_transmit_sanitized
+Debug/send_transmit_sanitized
+MinSizeRel/send_transmit_sanitized
+MinSizeRel/send_transmit_sanitized
+RelWithDebInfo/send_transmit_sanitized
+RelWithDebInfo/send_transmit_sanitized
+Deployment/send_transmit_sanitized
+Deployment/send_transmit_sanitized
+Development/send_transmit_sanitized
+Development/send_transmit_sanitized
+28/35 Test #28: send_transmit ....................***Not Run   0.00 sec
+      Start 29: send_retx
+Could not find executable send_retx_sanitized
+Looked in the following places:
+send_retx_sanitized
+send_retx_sanitized
+Release/send_retx_sanitized
+Release/send_retx_sanitized
+Debug/send_retx_sanitized
+Debug/send_retx_sanitized
+MinSizeRel/send_retx_sanitized
+MinSizeRel/send_retx_sanitized
+RelWithDebInfo/send_retx_sanitized
+RelWithDebInfo/send_retx_sanitized
+Deployment/send_retx_sanitized
+Deployment/send_retx_sanitized
+Development/send_retx_sanitized
+Development/send_retx_sanitized
+29/35 Test #29: send_retx ........................***Not Run   0.00 sec
+      Start 30: send_window
+Could not find executable send_window_sanitized
+Looked in the following places:
+send_window_sanitized
+send_window_sanitized
+Release/send_window_sanitized
+Release/send_window_sanitized
+Debug/send_window_sanitized
+Debug/send_window_sanitized
+MinSizeRel/send_window_sanitized
+MinSizeRel/send_window_sanitized
+RelWithDebInfo/send_window_sanitized
+RelWithDebInfo/send_window_sanitized
+Deployment/send_window_sanitized
+Deployment/send_window_sanitized
+Development/send_window_sanitized
+Development/send_window_sanitized
+30/35 Test #30: send_window ......................***Not Run   0.00 sec
+      Start 31: send_ack
+Could not find executable send_ack_sanitized
+Looked in the following places:
+send_ack_sanitized
+send_ack_sanitized
+Release/send_ack_sanitized
+Release/send_ack_sanitized
+Debug/send_ack_sanitized
+Debug/send_ack_sanitized
+MinSizeRel/send_ack_sanitized
+MinSizeRel/send_ack_sanitized
+RelWithDebInfo/send_ack_sanitized
+RelWithDebInfo/send_ack_sanitized
+Deployment/send_ack_sanitized
+Deployment/send_ack_sanitized
+Development/send_ack_sanitized
+Development/send_ack_sanitized
+31/35 Test #31: send_ack .........................***Not Run   0.00 sec
+      Start 32: send_close
+Could not find executable send_close_sanitized
+Looked in the following places:
+send_close_sanitized
+send_close_sanitized
+Release/send_close_sanitized
+Release/send_close_sanitized
+Debug/send_close_sanitized
+Debug/send_close_sanitized
+MinSizeRel/send_close_sanitized
+MinSizeRel/send_close_sanitized
+RelWithDebInfo/send_close_sanitized
+RelWithDebInfo/send_close_sanitized
+Deployment/send_close_sanitized
+Deployment/send_close_sanitized
+Development/send_close_sanitized
+Development/send_close_sanitized
+32/35 Test #32: send_close .......................***Not Run   0.00 sec
+      Start 33: send_extra
+Could not find executable send_extra_sanitized
+Looked in the following places:
+send_extra_sanitized
+send_extra_sanitized
+Release/send_extra_sanitized
+Release/send_extra_sanitized
+Debug/send_extra_sanitized
+Debug/send_extra_sanitized
+MinSizeRel/send_extra_sanitized
+MinSizeRel/send_extra_sanitized
+RelWithDebInfo/send_extra_sanitized
+RelWithDebInfo/send_extra_sanitized
+Deployment/send_extra_sanitized
+Deployment/send_extra_sanitized
+Development/send_extra_sanitized
+Development/send_extra_sanitized
+33/35 Test #33: send_extra .......................***Not Run   0.00 sec
+      Start 34: net_interface
+Could not find executable net_interface_sanitized
+Looked in the following places:
+net_interface_sanitized
+net_interface_sanitized
+Release/net_interface_sanitized
+Release/net_interface_sanitized
+Debug/net_interface_sanitized
+Debug/net_interface_sanitized
+MinSizeRel/net_interface_sanitized
+MinSizeRel/net_interface_sanitized
+RelWithDebInfo/net_interface_sanitized
+RelWithDebInfo/net_interface_sanitized
+Deployment/net_interface_sanitized
+Deployment/net_interface_sanitized
+Development/net_interface_sanitized
+Development/net_interface_sanitized
+34/35 Test #34: net_interface ....................***Not Run   0.00 sec
+      Start 35: router
+Could not find executable router_sanitized
+Looked in the following places:
+router_sanitized
+router_sanitized
+Release/router_sanitized
+Release/router_sanitized
+Debug/router_sanitized
+Debug/router_sanitized
+MinSizeRel/router_sanitized
+MinSizeRel/router_sanitized
+RelWithDebInfo/router_sanitized
+RelWithDebInfo/router_sanitized
+Deployment/router_sanitized
+Deployment/router_sanitized
+Development/router_sanitized
+Development/router_sanitized
+35/35 Test #35: router ...........................***Not Run   0.00 sec
+
+20% tests passed, 28 tests failed out of 35
+
+Total Test time (real) =   7.78 sec
+
+The following tests FAILED:
+	  8 - reassembler_single (Not Run)
+	  9 - reassembler_cap (Not Run)
+	 10 - reassembler_seq (Not Run)
+	 11 - reassembler_dup (Not Run)
+	 12 - reassembler_holes (Not Run)
+	 13 - reassembler_overlapping (Not Run)
+	 14 - reassembler_win (Not Run)
+	 15 - wrapping_integers_cmp (Not Run)
+	 16 - wrapping_integers_wrap (Not Run)
+	 17 - wrapping_integers_unwrap (Not Run)
+	 18 - wrapping_integers_roundtrip (Not Run)
+	 19 - wrapping_integers_extra (Not Run)
+	 20 - recv_connect (Not Run)
+	 21 - recv_transmit (Not Run)
+	 22 - recv_window (Not Run)
+	 23 - recv_reorder (Not Run)
+	 24 - recv_reorder_more (Not Run)
+	 25 - recv_close (Not Run)
+	 26 - recv_special (Not Run)
+	 27 - send_connect (Not Run)
+	 28 - send_transmit (Not Run)
+	 29 - send_retx (Not Run)
+	 30 - send_window (Not Run)
+	 31 - send_ack (Not Run)
+	 32 - send_close (Not Run)
+	 33 - send_extra (Not Run)
+	 34 - net_interface (Not Run)
+	 35 - router (Not Run)
