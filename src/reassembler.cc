@@ -20,7 +20,7 @@ void Reassembler::insert( uint64_t first_index, string data, bool is_last_substr
     data = data.substr( index - first_index, min( avail_cap, len ) );
     if ( !data.empty() ) {
       if ( buf_.find( index ) != buf_.end() ) {
-        if ( buf_[index].length() < data.length() ) 
+        if ( buf_[index].length() < data.length() )
           buf_[index] = data;
       } else
         buf_[index] = data;
