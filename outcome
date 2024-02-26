@@ -1,145 +1,33 @@
 Running tests...
 Test project /mnt/minnow/build
       Start  1: compile with bug-checkers
- 1/35 Test  #1: compile with bug-checkers ........   Passed    0.79 sec
+ 1/35 Test  #1: compile with bug-checkers ........   Passed    2.39 sec
       Start  2: byte_stream_basics
- 2/35 Test  #2: byte_stream_basics ...............   Passed    1.06 sec
+ 2/35 Test  #2: byte_stream_basics ...............   Passed    1.08 sec
       Start  3: byte_stream_capacity
- 3/35 Test  #3: byte_stream_capacity .............   Passed    1.06 sec
+ 3/35 Test  #3: byte_stream_capacity .............   Passed    1.07 sec
       Start  4: byte_stream_one_write
- 4/35 Test  #4: byte_stream_one_write ............   Passed    1.06 sec
+ 4/35 Test  #4: byte_stream_one_write ............   Passed    1.07 sec
       Start  5: byte_stream_two_writes
  5/35 Test  #5: byte_stream_two_writes ...........   Passed    1.06 sec
       Start  6: byte_stream_many_writes
- 6/35 Test  #6: byte_stream_many_writes ..........   Passed    1.09 sec
+ 6/35 Test  #6: byte_stream_many_writes ..........   Passed    1.11 sec
       Start  7: byte_stream_stress_test
- 7/35 Test  #7: byte_stream_stress_test ..........   Passed    1.38 sec
+ 7/35 Test  #7: byte_stream_stress_test ..........   Passed    1.40 sec
       Start  8: reassembler_single
-Could not find executable reassembler_single_sanitized
-Looked in the following places:
-reassembler_single_sanitized
-reassembler_single_sanitized
-Release/reassembler_single_sanitized
-Release/reassembler_single_sanitized
-Debug/reassembler_single_sanitized
-Debug/reassembler_single_sanitized
-MinSizeRel/reassembler_single_sanitized
-MinSizeRel/reassembler_single_sanitized
-RelWithDebInfo/reassembler_single_sanitized
-RelWithDebInfo/reassembler_single_sanitized
-Deployment/reassembler_single_sanitized
-Deployment/reassembler_single_sanitized
-Development/reassembler_single_sanitized
-Development/reassembler_single_sanitized
- 8/35 Test  #8: reassembler_single ...............***Not Run   0.00 sec
+ 8/35 Test  #8: reassembler_single ...............   Passed    1.07 sec
       Start  9: reassembler_cap
-Could not find executable reassembler_cap_sanitized
-Looked in the following places:
-reassembler_cap_sanitized
-reassembler_cap_sanitized
-Release/reassembler_cap_sanitized
-Release/reassembler_cap_sanitized
-Debug/reassembler_cap_sanitized
-Debug/reassembler_cap_sanitized
-MinSizeRel/reassembler_cap_sanitized
-MinSizeRel/reassembler_cap_sanitized
-RelWithDebInfo/reassembler_cap_sanitized
-RelWithDebInfo/reassembler_cap_sanitized
-Deployment/reassembler_cap_sanitized
-Deployment/reassembler_cap_sanitized
-Development/reassembler_cap_sanitized
-Development/reassembler_cap_sanitized
- 9/35 Test  #9: reassembler_cap ..................***Not Run   0.00 sec
+ 9/35 Test  #9: reassembler_cap ..................   Passed    1.07 sec
       Start 10: reassembler_seq
-Could not find executable reassembler_seq_sanitized
-Looked in the following places:
-reassembler_seq_sanitized
-reassembler_seq_sanitized
-Release/reassembler_seq_sanitized
-Release/reassembler_seq_sanitized
-Debug/reassembler_seq_sanitized
-Debug/reassembler_seq_sanitized
-MinSizeRel/reassembler_seq_sanitized
-MinSizeRel/reassembler_seq_sanitized
-RelWithDebInfo/reassembler_seq_sanitized
-RelWithDebInfo/reassembler_seq_sanitized
-Deployment/reassembler_seq_sanitized
-Deployment/reassembler_seq_sanitized
-Development/reassembler_seq_sanitized
-Development/reassembler_seq_sanitized
-10/35 Test #10: reassembler_seq ..................***Not Run   0.00 sec
+10/35 Test #10: reassembler_seq ..................   Passed    1.08 sec
       Start 11: reassembler_dup
-Could not find executable reassembler_dup_sanitized
-Looked in the following places:
-reassembler_dup_sanitized
-reassembler_dup_sanitized
-Release/reassembler_dup_sanitized
-Release/reassembler_dup_sanitized
-Debug/reassembler_dup_sanitized
-Debug/reassembler_dup_sanitized
-MinSizeRel/reassembler_dup_sanitized
-MinSizeRel/reassembler_dup_sanitized
-RelWithDebInfo/reassembler_dup_sanitized
-RelWithDebInfo/reassembler_dup_sanitized
-Deployment/reassembler_dup_sanitized
-Deployment/reassembler_dup_sanitized
-Development/reassembler_dup_sanitized
-Development/reassembler_dup_sanitized
-11/35 Test #11: reassembler_dup ..................***Not Run   0.00 sec
+11/35 Test #11: reassembler_dup ..................   Passed    1.09 sec
       Start 12: reassembler_holes
-Could not find executable reassembler_holes_sanitized
-Looked in the following places:
-reassembler_holes_sanitized
-reassembler_holes_sanitized
-Release/reassembler_holes_sanitized
-Release/reassembler_holes_sanitized
-Debug/reassembler_holes_sanitized
-Debug/reassembler_holes_sanitized
-MinSizeRel/reassembler_holes_sanitized
-MinSizeRel/reassembler_holes_sanitized
-RelWithDebInfo/reassembler_holes_sanitized
-RelWithDebInfo/reassembler_holes_sanitized
-Deployment/reassembler_holes_sanitized
-Deployment/reassembler_holes_sanitized
-Development/reassembler_holes_sanitized
-Development/reassembler_holes_sanitized
-12/35 Test #12: reassembler_holes ................***Not Run   0.00 sec
+12/35 Test #12: reassembler_holes ................   Passed    1.07 sec
       Start 13: reassembler_overlapping
-Could not find executable reassembler_overlapping_sanitized
-Looked in the following places:
-reassembler_overlapping_sanitized
-reassembler_overlapping_sanitized
-Release/reassembler_overlapping_sanitized
-Release/reassembler_overlapping_sanitized
-Debug/reassembler_overlapping_sanitized
-Debug/reassembler_overlapping_sanitized
-MinSizeRel/reassembler_overlapping_sanitized
-MinSizeRel/reassembler_overlapping_sanitized
-RelWithDebInfo/reassembler_overlapping_sanitized
-RelWithDebInfo/reassembler_overlapping_sanitized
-Deployment/reassembler_overlapping_sanitized
-Deployment/reassembler_overlapping_sanitized
-Development/reassembler_overlapping_sanitized
-Development/reassembler_overlapping_sanitized
-13/35 Test #13: reassembler_overlapping ..........***Not Run   0.00 sec
+13/35 Test #13: reassembler_overlapping ..........   Passed    1.09 sec
       Start 14: reassembler_win
-Could not find executable reassembler_win_sanitized
-Looked in the following places:
-reassembler_win_sanitized
-reassembler_win_sanitized
-Release/reassembler_win_sanitized
-Release/reassembler_win_sanitized
-Debug/reassembler_win_sanitized
-Debug/reassembler_win_sanitized
-MinSizeRel/reassembler_win_sanitized
-MinSizeRel/reassembler_win_sanitized
-RelWithDebInfo/reassembler_win_sanitized
-RelWithDebInfo/reassembler_win_sanitized
-Deployment/reassembler_win_sanitized
-Deployment/reassembler_win_sanitized
-Development/reassembler_win_sanitized
-Development/reassembler_win_sanitized
-14/35 Test #14: reassembler_win ..................***Not Run   0.00 sec
+14/35 Test #14: reassembler_win ..................   Passed    2.98 sec
       Start 15: wrapping_integers_cmp
 Could not find executable wrapping_integers_cmp_sanitized
 Looked in the following places:
@@ -519,18 +407,11 @@ Development/router_sanitized
 Development/router_sanitized
 35/35 Test #35: router ...........................***Not Run   0.00 sec
 
-20% tests passed, 28 tests failed out of 35
+40% tests passed, 21 tests failed out of 35
 
-Total Test time (real) =   7.78 sec
+Total Test time (real) =  18.83 sec
 
 The following tests FAILED:
-	  8 - reassembler_single (Not Run)
-	  9 - reassembler_cap (Not Run)
-	 10 - reassembler_seq (Not Run)
-	 11 - reassembler_dup (Not Run)
-	 12 - reassembler_holes (Not Run)
-	 13 - reassembler_overlapping (Not Run)
-	 14 - reassembler_win (Not Run)
 	 15 - wrapping_integers_cmp (Not Run)
 	 16 - wrapping_integers_wrap (Not Run)
 	 17 - wrapping_integers_unwrap (Not Run)
