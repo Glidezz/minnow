@@ -1,183 +1,71 @@
 Running tests...
 Test project /mnt/minnow/build
       Start  1: compile with bug-checkers
- 1/35 Test  #1: compile with bug-checkers ........   Passed    2.60 sec
+ 1/35 Test  #1: compile with bug-checkers ........   Passed    6.02 sec
       Start  2: byte_stream_basics
- 2/35 Test  #2: byte_stream_basics ...............   Passed    1.08 sec
+ 2/35 Test  #2: byte_stream_basics ...............   Passed    1.11 sec
       Start  3: byte_stream_capacity
- 3/35 Test  #3: byte_stream_capacity .............   Passed    1.07 sec
+ 3/35 Test  #3: byte_stream_capacity .............   Passed    1.08 sec
       Start  4: byte_stream_one_write
- 4/35 Test  #4: byte_stream_one_write ............   Passed    1.08 sec
+ 4/35 Test  #4: byte_stream_one_write ............   Passed    1.07 sec
       Start  5: byte_stream_two_writes
- 5/35 Test  #5: byte_stream_two_writes ...........   Passed    1.07 sec
+ 5/35 Test  #5: byte_stream_two_writes ...........   Passed    1.11 sec
       Start  6: byte_stream_many_writes
- 6/35 Test  #6: byte_stream_many_writes ..........   Passed    1.10 sec
+ 6/35 Test  #6: byte_stream_many_writes ..........   Passed    1.11 sec
       Start  7: byte_stream_stress_test
- 7/35 Test  #7: byte_stream_stress_test ..........   Passed    1.37 sec
+ 7/35 Test  #7: byte_stream_stress_test ..........   Passed    1.39 sec
       Start  8: reassembler_single
  8/35 Test  #8: reassembler_single ...............   Passed    1.07 sec
       Start  9: reassembler_cap
- 9/35 Test  #9: reassembler_cap ..................   Passed    1.07 sec
+ 9/35 Test  #9: reassembler_cap ..................   Passed    1.06 sec
       Start 10: reassembler_seq
-10/35 Test #10: reassembler_seq ..................   Passed    1.08 sec
+10/35 Test #10: reassembler_seq ..................   Passed    1.07 sec
       Start 11: reassembler_dup
-11/35 Test #11: reassembler_dup ..................   Passed    1.11 sec
+11/35 Test #11: reassembler_dup ..................   Passed    1.08 sec
       Start 12: reassembler_holes
-12/35 Test #12: reassembler_holes ................   Passed    1.10 sec
+12/35 Test #12: reassembler_holes ................   Passed    1.07 sec
       Start 13: reassembler_overlapping
-13/35 Test #13: reassembler_overlapping ..........   Passed    1.24 sec
+13/35 Test #13: reassembler_overlapping ..........   Passed    1.13 sec
       Start 14: reassembler_win
 14/35 Test #14: reassembler_win ..................   Passed    2.83 sec
       Start 15: wrapping_integers_cmp
-15/35 Test #15: wrapping_integers_cmp ............   Passed    1.06 sec
+15/35 Test #15: wrapping_integers_cmp ............   Passed    1.08 sec
       Start 16: wrapping_integers_wrap
-16/35 Test #16: wrapping_integers_wrap ...........   Passed    1.05 sec
+16/35 Test #16: wrapping_integers_wrap ...........   Passed    1.09 sec
       Start 17: wrapping_integers_unwrap
-17/35 Test #17: wrapping_integers_unwrap .........   Passed    1.06 sec
+17/35 Test #17: wrapping_integers_unwrap .........   Passed    1.05 sec
       Start 18: wrapping_integers_roundtrip
 18/35 Test #18: wrapping_integers_roundtrip ......   Passed    1.71 sec
       Start 19: wrapping_integers_extra
-19/35 Test #19: wrapping_integers_extra ..........   Passed    1.19 sec
+19/35 Test #19: wrapping_integers_extra ..........   Passed    1.18 sec
       Start 20: recv_connect
-20/35 Test #20: recv_connect .....................   Passed    1.07 sec
+20/35 Test #20: recv_connect .....................   Passed    1.08 sec
       Start 21: recv_transmit
-21/35 Test #21: recv_transmit ....................   Passed    1.32 sec
+21/35 Test #21: recv_transmit ....................   Passed    1.40 sec
       Start 22: recv_window
-22/35 Test #22: recv_window ......................   Passed    1.07 sec
+22/35 Test #22: recv_window ......................   Passed    1.10 sec
       Start 23: recv_reorder
 23/35 Test #23: recv_reorder .....................   Passed    1.07 sec
       Start 24: recv_reorder_more
-24/35 Test #24: recv_reorder_more ................   Passed    4.82 sec
+24/35 Test #24: recv_reorder_more ................   Passed    5.17 sec
       Start 25: recv_close
-25/35 Test #25: recv_close .......................   Passed    1.07 sec
+25/35 Test #25: recv_close .......................   Passed    1.10 sec
       Start 26: recv_special
-26/35 Test #26: recv_special .....................   Passed    1.07 sec
+26/35 Test #26: recv_special .....................   Passed    1.09 sec
       Start 27: send_connect
-Could not find executable send_connect_sanitized
-Looked in the following places:
-send_connect_sanitized
-send_connect_sanitized
-Release/send_connect_sanitized
-Release/send_connect_sanitized
-Debug/send_connect_sanitized
-Debug/send_connect_sanitized
-MinSizeRel/send_connect_sanitized
-MinSizeRel/send_connect_sanitized
-RelWithDebInfo/send_connect_sanitized
-RelWithDebInfo/send_connect_sanitized
-Deployment/send_connect_sanitized
-Deployment/send_connect_sanitized
-Development/send_connect_sanitized
-Development/send_connect_sanitized
-27/35 Test #27: send_connect .....................***Not Run   0.00 sec
+27/35 Test #27: send_connect .....................   Passed    1.07 sec
       Start 28: send_transmit
-Could not find executable send_transmit_sanitized
-Looked in the following places:
-send_transmit_sanitized
-send_transmit_sanitized
-Release/send_transmit_sanitized
-Release/send_transmit_sanitized
-Debug/send_transmit_sanitized
-Debug/send_transmit_sanitized
-MinSizeRel/send_transmit_sanitized
-MinSizeRel/send_transmit_sanitized
-RelWithDebInfo/send_transmit_sanitized
-RelWithDebInfo/send_transmit_sanitized
-Deployment/send_transmit_sanitized
-Deployment/send_transmit_sanitized
-Development/send_transmit_sanitized
-Development/send_transmit_sanitized
-28/35 Test #28: send_transmit ....................***Not Run   0.00 sec
+28/35 Test #28: send_transmit ....................   Passed    1.40 sec
       Start 29: send_retx
-Could not find executable send_retx_sanitized
-Looked in the following places:
-send_retx_sanitized
-send_retx_sanitized
-Release/send_retx_sanitized
-Release/send_retx_sanitized
-Debug/send_retx_sanitized
-Debug/send_retx_sanitized
-MinSizeRel/send_retx_sanitized
-MinSizeRel/send_retx_sanitized
-RelWithDebInfo/send_retx_sanitized
-RelWithDebInfo/send_retx_sanitized
-Deployment/send_retx_sanitized
-Deployment/send_retx_sanitized
-Development/send_retx_sanitized
-Development/send_retx_sanitized
-29/35 Test #29: send_retx ........................***Not Run   0.00 sec
+29/35 Test #29: send_retx ........................   Passed    1.08 sec
       Start 30: send_window
-Could not find executable send_window_sanitized
-Looked in the following places:
-send_window_sanitized
-send_window_sanitized
-Release/send_window_sanitized
-Release/send_window_sanitized
-Debug/send_window_sanitized
-Debug/send_window_sanitized
-MinSizeRel/send_window_sanitized
-MinSizeRel/send_window_sanitized
-RelWithDebInfo/send_window_sanitized
-RelWithDebInfo/send_window_sanitized
-Deployment/send_window_sanitized
-Deployment/send_window_sanitized
-Development/send_window_sanitized
-Development/send_window_sanitized
-30/35 Test #30: send_window ......................***Not Run   0.00 sec
+30/35 Test #30: send_window ......................   Passed    1.21 sec
       Start 31: send_ack
-Could not find executable send_ack_sanitized
-Looked in the following places:
-send_ack_sanitized
-send_ack_sanitized
-Release/send_ack_sanitized
-Release/send_ack_sanitized
-Debug/send_ack_sanitized
-Debug/send_ack_sanitized
-MinSizeRel/send_ack_sanitized
-MinSizeRel/send_ack_sanitized
-RelWithDebInfo/send_ack_sanitized
-RelWithDebInfo/send_ack_sanitized
-Deployment/send_ack_sanitized
-Deployment/send_ack_sanitized
-Development/send_ack_sanitized
-Development/send_ack_sanitized
-31/35 Test #31: send_ack .........................***Not Run   0.00 sec
+31/35 Test #31: send_ack .........................   Passed    1.08 sec
       Start 32: send_close
-Could not find executable send_close_sanitized
-Looked in the following places:
-send_close_sanitized
-send_close_sanitized
-Release/send_close_sanitized
-Release/send_close_sanitized
-Debug/send_close_sanitized
-Debug/send_close_sanitized
-MinSizeRel/send_close_sanitized
-MinSizeRel/send_close_sanitized
-RelWithDebInfo/send_close_sanitized
-RelWithDebInfo/send_close_sanitized
-Deployment/send_close_sanitized
-Deployment/send_close_sanitized
-Development/send_close_sanitized
-Development/send_close_sanitized
-32/35 Test #32: send_close .......................***Not Run   0.00 sec
+32/35 Test #32: send_close .......................   Passed    1.09 sec
       Start 33: send_extra
-Could not find executable send_extra_sanitized
-Looked in the following places:
-send_extra_sanitized
-send_extra_sanitized
-Release/send_extra_sanitized
-Release/send_extra_sanitized
-Debug/send_extra_sanitized
-Debug/send_extra_sanitized
-MinSizeRel/send_extra_sanitized
-MinSizeRel/send_extra_sanitized
-RelWithDebInfo/send_extra_sanitized
-RelWithDebInfo/send_extra_sanitized
-Deployment/send_extra_sanitized
-Deployment/send_extra_sanitized
-Development/send_extra_sanitized
-Development/send_extra_sanitized
-33/35 Test #33: send_extra .......................***Not Run   0.00 sec
+33/35 Test #33: send_extra .......................   Passed    1.12 sec
       Start 34: net_interface
 Could not find executable net_interface_sanitized
 Looked in the following places:
@@ -215,29 +103,10 @@ Development/router_sanitized
 Development/router_sanitized
 35/35 Test #35: router ...........................***Not Run   0.00 sec
 
-74% tests passed, 9 tests failed out of 35
+94% tests passed, 2 tests failed out of 35
 
-Total Test time (real) =  36.63 sec
+Total Test time (real) =  48.56 sec
 
 The following tests FAILED:
-	 27 - send_connect (Not Run)
-	 28 - send_transmit (Not Run)
-	 29 - send_retx (Not Run)
-	 30 - send_window (Not Run)
-	 31 - send_ack (Not Run)
-	 32 - send_close (Not Run)
-	 33 - send_extra (Not Run)
 	 34 - net_interface (Not Run)
 	 35 - router (Not Run)
-Test project /mnt/minnow/build
-    Start 37: compile with optimization
-1/3 Test #37: compile with optimization ........   Passed    5.54 sec
-    Start 38: byte_stream_speed_test
-2/3 Test #38: byte_stream_speed_test ...........   Passed    0.26 sec
-    Start 39: reassembler_speed_test
-3/3 Test #39: reassembler_speed_test ...........   Passed    0.39 sec
-
-100% tests passed, 0 tests failed out of 3
-
-Total Test time (real) =   6.20 sec
-Built target speed

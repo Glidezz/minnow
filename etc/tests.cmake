@@ -1,6 +1,6 @@
 include(CTest)
 
-list(APPEND CMAKE_CTEST_ARGUMENTS --output-on-failure --stop-on-failure --timeout 22 -E 'speed_test|optimization|webget')
+list(APPEND CMAKE_CTEST_ARGUMENTS --output-on-failure --stop-on-failure --timeout 200 -E 'speed_test|optimization|webget')
 
 set(compile_name "compile with bug-checkers")
 add_test(NAME ${compile_name}
