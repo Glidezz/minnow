@@ -1,89 +1,73 @@
 Running tests...
 Test project /mnt/minnow/build
       Start  1: compile with bug-checkers
- 1/35 Test  #1: compile with bug-checkers ........   Passed    6.02 sec
+ 1/35 Test  #1: compile with bug-checkers ........   Passed    1.13 sec
       Start  2: byte_stream_basics
- 2/35 Test  #2: byte_stream_basics ...............   Passed    1.11 sec
+ 2/35 Test  #2: byte_stream_basics ...............   Passed    1.07 sec
       Start  3: byte_stream_capacity
- 3/35 Test  #3: byte_stream_capacity .............   Passed    1.08 sec
+ 3/35 Test  #3: byte_stream_capacity .............   Passed    1.06 sec
       Start  4: byte_stream_one_write
- 4/35 Test  #4: byte_stream_one_write ............   Passed    1.07 sec
+ 4/35 Test  #4: byte_stream_one_write ............   Passed    1.06 sec
       Start  5: byte_stream_two_writes
- 5/35 Test  #5: byte_stream_two_writes ...........   Passed    1.11 sec
+ 5/35 Test  #5: byte_stream_two_writes ...........   Passed    1.07 sec
       Start  6: byte_stream_many_writes
- 6/35 Test  #6: byte_stream_many_writes ..........   Passed    1.11 sec
+ 6/35 Test  #6: byte_stream_many_writes ..........   Passed    1.10 sec
       Start  7: byte_stream_stress_test
  7/35 Test  #7: byte_stream_stress_test ..........   Passed    1.39 sec
       Start  8: reassembler_single
  8/35 Test  #8: reassembler_single ...............   Passed    1.07 sec
       Start  9: reassembler_cap
- 9/35 Test  #9: reassembler_cap ..................   Passed    1.06 sec
+ 9/35 Test  #9: reassembler_cap ..................   Passed    1.07 sec
       Start 10: reassembler_seq
-10/35 Test #10: reassembler_seq ..................   Passed    1.07 sec
+10/35 Test #10: reassembler_seq ..................   Passed    1.10 sec
       Start 11: reassembler_dup
 11/35 Test #11: reassembler_dup ..................   Passed    1.08 sec
       Start 12: reassembler_holes
-12/35 Test #12: reassembler_holes ................   Passed    1.07 sec
+12/35 Test #12: reassembler_holes ................   Passed    1.08 sec
       Start 13: reassembler_overlapping
-13/35 Test #13: reassembler_overlapping ..........   Passed    1.13 sec
+13/35 Test #13: reassembler_overlapping ..........   Passed    1.07 sec
       Start 14: reassembler_win
-14/35 Test #14: reassembler_win ..................   Passed    2.83 sec
+14/35 Test #14: reassembler_win ..................   Passed    2.82 sec
       Start 15: wrapping_integers_cmp
-15/35 Test #15: wrapping_integers_cmp ............   Passed    1.08 sec
+15/35 Test #15: wrapping_integers_cmp ............   Passed    1.06 sec
       Start 16: wrapping_integers_wrap
-16/35 Test #16: wrapping_integers_wrap ...........   Passed    1.09 sec
+16/35 Test #16: wrapping_integers_wrap ...........   Passed    1.06 sec
       Start 17: wrapping_integers_unwrap
-17/35 Test #17: wrapping_integers_unwrap .........   Passed    1.05 sec
+17/35 Test #17: wrapping_integers_unwrap .........   Passed    1.08 sec
       Start 18: wrapping_integers_roundtrip
-18/35 Test #18: wrapping_integers_roundtrip ......   Passed    1.71 sec
+18/35 Test #18: wrapping_integers_roundtrip ......   Passed    1.72 sec
       Start 19: wrapping_integers_extra
-19/35 Test #19: wrapping_integers_extra ..........   Passed    1.18 sec
+19/35 Test #19: wrapping_integers_extra ..........   Passed    1.19 sec
       Start 20: recv_connect
 20/35 Test #20: recv_connect .....................   Passed    1.08 sec
       Start 21: recv_transmit
-21/35 Test #21: recv_transmit ....................   Passed    1.40 sec
+21/35 Test #21: recv_transmit ....................   Passed    1.35 sec
       Start 22: recv_window
-22/35 Test #22: recv_window ......................   Passed    1.10 sec
+22/35 Test #22: recv_window ......................   Passed    1.12 sec
       Start 23: recv_reorder
-23/35 Test #23: recv_reorder .....................   Passed    1.07 sec
+23/35 Test #23: recv_reorder .....................   Passed    1.08 sec
       Start 24: recv_reorder_more
-24/35 Test #24: recv_reorder_more ................   Passed    5.17 sec
+24/35 Test #24: recv_reorder_more ................   Passed    5.02 sec
       Start 25: recv_close
-25/35 Test #25: recv_close .......................   Passed    1.10 sec
+25/35 Test #25: recv_close .......................   Passed    1.07 sec
       Start 26: recv_special
-26/35 Test #26: recv_special .....................   Passed    1.09 sec
+26/35 Test #26: recv_special .....................   Passed    1.08 sec
       Start 27: send_connect
 27/35 Test #27: send_connect .....................   Passed    1.07 sec
       Start 28: send_transmit
-28/35 Test #28: send_transmit ....................   Passed    1.40 sec
+28/35 Test #28: send_transmit ....................   Passed    1.36 sec
       Start 29: send_retx
 29/35 Test #29: send_retx ........................   Passed    1.08 sec
       Start 30: send_window
-30/35 Test #30: send_window ......................   Passed    1.21 sec
+30/35 Test #30: send_window ......................   Passed    1.20 sec
       Start 31: send_ack
-31/35 Test #31: send_ack .........................   Passed    1.08 sec
+31/35 Test #31: send_ack .........................   Passed    1.09 sec
       Start 32: send_close
-32/35 Test #32: send_close .......................   Passed    1.09 sec
+32/35 Test #32: send_close .......................   Passed    1.07 sec
       Start 33: send_extra
 33/35 Test #33: send_extra .......................   Passed    1.12 sec
       Start 34: net_interface
-Could not find executable net_interface_sanitized
-Looked in the following places:
-net_interface_sanitized
-net_interface_sanitized
-Release/net_interface_sanitized
-Release/net_interface_sanitized
-Debug/net_interface_sanitized
-Debug/net_interface_sanitized
-MinSizeRel/net_interface_sanitized
-MinSizeRel/net_interface_sanitized
-RelWithDebInfo/net_interface_sanitized
-RelWithDebInfo/net_interface_sanitized
-Deployment/net_interface_sanitized
-Deployment/net_interface_sanitized
-Development/net_interface_sanitized
-Development/net_interface_sanitized
-34/35 Test #34: net_interface ....................***Not Run   0.00 sec
+34/35 Test #34: net_interface ....................   Passed    1.08 sec
       Start 35: router
 Could not find executable router_sanitized
 Looked in the following places:
@@ -103,10 +87,9 @@ Development/router_sanitized
 Development/router_sanitized
 35/35 Test #35: router ...........................***Not Run   0.00 sec
 
-94% tests passed, 2 tests failed out of 35
+97% tests passed, 1 tests failed out of 35
 
-Total Test time (real) =  48.56 sec
+Total Test time (real) =  44.27 sec
 
 The following tests FAILED:
-	 34 - net_interface (Not Run)
 	 35 - router (Not Run)

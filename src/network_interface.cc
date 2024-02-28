@@ -28,20 +28,100 @@ NetworkInterface::NetworkInterface( string_view name,
 void NetworkInterface::send_datagram( const InternetDatagram& dgram, const Address& next_hop )
 {
   // Your code here.
-  (void)dgram;
-  (void)next_hop;
+  uint32_t ip_address = next_hop.ipv4_numeric();
+  if ( ip2mac_.find( ip_address ) != ip2mac_.end() ) {
+    // 转发ipv4帧
+    EthernetFrame frame { { ip2mac_[ip_address].first, ethernet_address_, EthernetHeader::TYPE_IPv4 },
+                          serialize( dgram ) };
+    transmit( frame );
+  } else {
+    if ( arp_timer.find( ip_address ) == arp_timer.end() ) {
+      // 发送广播arp帧 询问目的mac地址
+      ARPMessage message;
+      message.sender_ethernet_address = ethernet_address_;
+      message.sender_ip_address = ip_address_.ipv4_numeric();
+      // message.target_ethernet_address = ETHERNET_BROADCAST; ？？
+      message.target_ip_address = ip_address;
+      message.opcode = ARPMessage::OPCODE_REQUEST;
+
+      EthernetFrame frame { { ETHERNET_BROADCAST, ethernet_address_, EthernetHeader::TYPE_ARP },
+                            serialize( message ) };
+      transmit( frame );
+      arp_timer[ip_address] = 0;
+    }
+    // 待发送的数据报
+    IP_and_datagram_.emplace( ip_address, dgram );
+  }
 }
 
 //! \param[in] frame the incoming Ethernet frame
 void NetworkInterface::recv_frame( const EthernetFrame& frame )
 {
   // Your code here.
-  (void)frame;
+  if ( frame.header.dst != ETHERNET_BROADCAST && frame.header.dst != ethernet_address_ ) {
+    // 不是发送给自己的
+    return;
+  }
+
+  if ( frame.header.type == EthernetHeader::TYPE_IPv4 ) {
+    InternetDatagram data;
+    parse( data, frame.payload );
+    datagrams_received_.push( data );
+  } else if ( frame.header.type == EthernetHeader::TYPE_ARP ) {
+
+    //收到arp报文
+    ARPMessage message;
+    if ( parse( message, frame.payload ) ) {
+      if ( message.target_ip_address == ip_address_.ipv4_numeric() ) {
+        ip2mac_[message.sender_ip_address] = { message.sender_ethernet_address, 0 };
+        if ( message.opcode == ARPMessage::OPCODE_REPLY ) {
+          arp_timer[message.sender_ip_address] = 0;
+          auto range = IP_and_datagram_.equal_range( message.sender_ip_address );
+          for ( auto it = range.first; it != range.second; it++ ) {
+            auto data = it->second;
+            send_datagram( data, Address::from_ipv4_numeric( message.sender_ip_address ) );
+          }
+          IP_and_datagram_.erase( message.sender_ip_address );
+        } else if ( message.opcode == ARPMessage::OPCODE_REQUEST ) {
+          // 发送自己的mac地址
+          ARPMessage arpmessage;
+          arpmessage.sender_ethernet_address = ethernet_address_;
+          arpmessage.sender_ip_address = ip_address_.ipv4_numeric();
+          arpmessage.target_ethernet_address = message.sender_ethernet_address;
+          arpmessage.target_ip_address = message.sender_ip_address;
+          arpmessage.opcode = ARPMessage::OPCODE_REPLY;
+
+          EthernetFrame send_frame {
+            { message.sender_ethernet_address, ethernet_address_, EthernetHeader::TYPE_ARP },
+            serialize( arpmessage ) };
+          transmit( send_frame );
+        }
+      }
+    }
+  }
 }
 
 //! \param[in] ms_since_last_tick the number of milliseconds since the last call to this method
 void NetworkInterface::tick( const size_t ms_since_last_tick )
 {
   // Your code here.
-  (void)ms_since_last_tick;
+  static const size_t IP_MAP_TTL = 30000;
+  static const size_t ARP_TTL = 5000;
+
+  for ( auto it = ip2mac_.begin(); it != ip2mac_.end(); ) {
+    it->second.second += ms_since_last_tick;
+    if ( it->second.second >= IP_MAP_TTL ) {
+      it = ip2mac_.erase( it );
+    } else {
+      it++;
+    }
+  }
+
+  for ( auto it = arp_timer.begin(); it != arp_timer.end(); ) {
+    it->second += ms_since_last_tick;
+    if ( it->second >= ARP_TTL ) {
+      it = arp_timer.erase( it );
+    } else
+      it++;
+  }
 }
