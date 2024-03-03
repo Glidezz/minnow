@@ -5,6 +5,7 @@
 #include "ipv4_datagram.hh"
 #include <queue>
 #include <unordered_map>
+#include <vector>
 
 // A "network interface" that connects IP (the internet layer, or network layer)
 // with Ethernet (the network access layer, or link layer).
@@ -83,6 +84,6 @@ private:
   std::queue<InternetDatagram> datagrams_received_ {};
 
   std::unordered_map<uint32_t, std::pair<EthernetAddress, size_t>> ip2mac_ {};
-  std::unordered_multimap<uint32_t, InternetDatagram> IP_and_datagram_ {};
+  std::unordered_map<uint32_t, std::vector<InternetDatagram>> IP_and_datagram_ {};
   std::unordered_map<uint32_t, size_t> arp_timer {};
 };

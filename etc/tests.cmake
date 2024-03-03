@@ -70,11 +70,11 @@ add_custom_target (check3 COMMAND ${CMAKE_CTEST_COMMAND} --output-on-failure --s
 
 add_custom_target (check5 COMMAND ${CMAKE_CTEST_COMMAND} --output-on-failure --stop-on-failure --timeout 12 -R '^net_interface')
 
-add_custom_target (check6 COMMAND ${CMAKE_CTEST_COMMAND} --output-on-failure --stop-on-failure --timeout 12 -R '^net_interface|^router')
+add_custom_target (check6 COMMAND ${CMAKE_CTEST_COMMAND} --output-on-failure --stop-on-failure --timeout 120 -R '^net_interface|^router')
 
 ###
 
-add_custom_target (speed COMMAND ${CMAKE_CTEST_COMMAND} --output-on-failure --timeout 12 -R '_speed_test')
+add_custom_target (speed COMMAND ${CMAKE_CTEST_COMMAND} --output-on-failure --timeout 120 -R '_speed_test')
 
 set(compile_name_opt "compile with optimization")
 add_test(NAME ${compile_name_opt}

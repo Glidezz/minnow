@@ -30,11 +30,11 @@ void NetworkInterface::send_datagram( const InternetDatagram& dgram, const Addre
   // Your code here.
   uint32_t ip_address = next_hop.ipv4_numeric();
   if ( ip2mac_.find( ip_address ) != ip2mac_.end() ) {
-    // 转发ipv4帧
-    EthernetFrame frame { { ip2mac_[ip_address].first, ethernet_address_, EthernetHeader::TYPE_IPv4 },
-                          serialize( dgram ) };
-    transmit( frame );
+    // 转发ipv4数据报
+    transmit( { { ip2mac_[ip_address].first, ethernet_address_, EthernetHeader::TYPE_IPv4 }, serialize( dgram ) } );
   } else {
+    // 待发送的数据报
+    IP_and_datagram_[ip_address].push_back( move( dgram ) );
     if ( arp_timer.find( ip_address ) == arp_timer.end() ) {
       // 发送广播arp帧 询问目的mac地址
       ARPMessage message;
@@ -44,13 +44,9 @@ void NetworkInterface::send_datagram( const InternetDatagram& dgram, const Addre
       message.target_ip_address = ip_address;
       message.opcode = ARPMessage::OPCODE_REQUEST;
 
-      EthernetFrame frame { { ETHERNET_BROADCAST, ethernet_address_, EthernetHeader::TYPE_ARP },
-                            serialize( message ) };
-      transmit( frame );
+      transmit( { { ETHERNET_BROADCAST, ethernet_address_, EthernetHeader::TYPE_ARP }, serialize( message ) } );
       arp_timer[ip_address] = 0;
     }
-    // 待发送的数据报
-    IP_and_datagram_.emplace( ip_address, dgram );
   }
 }
 
@@ -65,24 +61,28 @@ void NetworkInterface::recv_frame( const EthernetFrame& frame )
 
   if ( frame.header.type == EthernetHeader::TYPE_IPv4 ) {
     InternetDatagram data;
-    parse( data, frame.payload );
-    datagrams_received_.push( data );
+    if ( !parse( data, frame.payload ) )
+      return;
+    datagrams_received_.emplace( move( data ) );
   } else if ( frame.header.type == EthernetHeader::TYPE_ARP ) {
-
     //收到arp报文
     ARPMessage message;
     if ( parse( message, frame.payload ) ) {
-      if ( message.target_ip_address == ip_address_.ipv4_numeric() ) {
-        ip2mac_[message.sender_ip_address] = { message.sender_ethernet_address, 0 };
-        if ( message.opcode == ARPMessage::OPCODE_REPLY ) {
-          arp_timer[message.sender_ip_address] = 0;
-          auto range = IP_and_datagram_.equal_range( message.sender_ip_address );
-          for ( auto it = range.first; it != range.second; it++ ) {
-            auto data = it->second;
-            send_datagram( data, Address::from_ipv4_numeric( message.sender_ip_address ) );
-          }
-          IP_and_datagram_.erase( message.sender_ip_address );
-        } else if ( message.opcode == ARPMessage::OPCODE_REQUEST ) {
+      ip2mac_[message.sender_ip_address] = { message.sender_ethernet_address, 0 };
+
+      if ( message.opcode == ARPMessage::OPCODE_REPLY ) {
+        // arp_timer[message.sender_ip_address] = 0;
+        auto& datas = IP_and_datagram_[message.sender_ip_address];
+        for ( auto data : datas ) {
+          // send_datagram( data, Address::from_ipv4_numeric( message.sender_ip_address ) );
+          transmit( { { message.sender_ethernet_address, ethernet_address_, EthernetHeader::TYPE_IPv4 },
+                      serialize( data ) } );
+        }
+        // IP_and_datagram_[message.sender_ip_address] = {};
+        IP_and_datagram_.erase( message.sender_ip_address );
+
+      } else if ( message.opcode == ARPMessage::OPCODE_REQUEST ) {
+        if ( message.target_ip_address == ip_address_.ipv4_numeric() ) {
           // 发送自己的mac地址
           ARPMessage arpmessage;
           arpmessage.sender_ethernet_address = ethernet_address_;
@@ -91,10 +91,8 @@ void NetworkInterface::recv_frame( const EthernetFrame& frame )
           arpmessage.target_ip_address = message.sender_ip_address;
           arpmessage.opcode = ARPMessage::OPCODE_REPLY;
 
-          EthernetFrame send_frame {
-            { message.sender_ethernet_address, ethernet_address_, EthernetHeader::TYPE_ARP },
-            serialize( arpmessage ) };
-          transmit( send_frame );
+          transmit( { { message.sender_ethernet_address, ethernet_address_, EthernetHeader::TYPE_ARP },
+                      serialize( arpmessage ) } );
         }
       }
     }

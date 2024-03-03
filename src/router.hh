@@ -35,4 +35,39 @@ public:
 private:
   // The router's collection of network interfaces
   std::vector<std::shared_ptr<NetworkInterface>> _interfaces {};
+  struct item
+  {
+    uint32_t route_prefix;
+    uint8_t prefix_length;
+    std::optional<Address> next_hop;
+    const size_t interface_num;
+  };
+  std::vector<item> router_table_ {};
+  int match_length( uint32_t src_ip, uint32_t tgt_ip, uint8_t tgt_len )
+  {
+    if ( tgt_len == 0 )
+      return 0;
+    if ( tgt_len > 32 )
+      return -1;
+
+    uint8_t len = 32U - tgt_len;
+    src_ip = src_ip >> len;
+    tgt_ip = tgt_ip >> len;
+    return ( src_ip == tgt_ip ) ? tgt_len : -1;
+  }
+
+  std::vector<item>::iterator longest_prefix_match_( uint32_t dst_ip )
+  {
+    int prefix = -1;
+    auto res = router_table_.end();
+
+    for ( auto it = router_table_.begin(); it != router_table_.end(); it++ ) {
+      auto len = match_length( dst_ip, it->route_prefix, it->prefix_length );
+      if ( len > prefix ) {
+        res = it;
+        prefix = len;
+      }
+    }
+    return res;
+  }
 };
