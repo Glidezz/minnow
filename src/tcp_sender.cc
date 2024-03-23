@@ -29,7 +29,7 @@ void TCPSender::push( const TransmitFunction& transmit )
   auto window_size
     = window_size_ == 0 ? 1 : window_size_ - sequence_numbers_in_flight_ - (uint16_t)( seqno == isn_ );
 
-  //从bytestream中取出window_size个字符加入到mess中
+  // 从bytestream中取出window_size个字符加入到mess中
   string mess;
   while ( reader().bytes_buffered() && mess.length() < window_size ) {
     auto str = reader().peek();
@@ -43,7 +43,7 @@ void TCPSender::push( const TransmitFunction& transmit )
 
     string payload( mess.substr( 0, len ) );
     TCPSenderMessage message { seqno, seqno == isn_, move( payload ), false, writer().has_error() };
-    //没有信息要发送
+    // 没有信息要发送
     if ( !FIN_ && writer().is_closed() && len == mess.length()
          && ( sequence_numbers_in_flight_ + message.sequence_length() < window_size_
               || ( window_size_ == 0 && message.sequence_length() == 0 ) ) ) {

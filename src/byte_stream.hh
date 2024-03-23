@@ -1,6 +1,7 @@
 #pragma once
 
 #include <cstdint>
+#include <queue>
 #include <string>
 #include <string_view>
 
@@ -26,11 +27,13 @@ protected:
   uint64_t capacity_;
   bool error_ {};
   bool eof_ {};
-  std::string buf_;
-  uint64_t head;
-  uint64_t tail;
-  uint64_t bytepushed_;
-  uint64_t bytepoped_;
+  // std::string buf_;
+  std::deque<std::string_view> view_queue_ {};
+  std::deque<std::string> data_queue_ {};
+  // uint64_t head;
+  // uint64_t tail;
+  uint64_t bytepushed_ {};
+  uint64_t bytepoped_ {};
 };
 
 class Writer : public ByteStream

@@ -65,7 +65,7 @@ void NetworkInterface::recv_frame( const EthernetFrame& frame )
       return;
     datagrams_received_.emplace( move( data ) );
   } else if ( frame.header.type == EthernetHeader::TYPE_ARP ) {
-    //收到arp报文
+    // 收到arp报文
     ARPMessage message;
     if ( parse( message, frame.payload ) ) {
       ip2mac_[message.sender_ip_address] = { message.sender_ethernet_address, 0 };
