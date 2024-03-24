@@ -19,5 +19,5 @@ To run clang-tidy (which suggests improvements): `cmake --build build --target t
 
 To format code: `cmake --build build --target format`
 
-main 属于cs144 Winter 2024课程代码
-old_version 属于cs144课程的2023nian的代码（？？？记不清了（））
+main 属于cs144 Winter 2024课程代码     
+old_version 属于cs144课程的2023年的代码（？？？记不清了（））
